@@ -4,8 +4,8 @@ import graphql.schema.DataFetcher;
 import graphql.schema.DataFetchingEnvironment;
 import java.util.List;
 import lombok.AllArgsConstructor;
-import org.rga.graphql.Movie;
-import org.rga.graphql.MovieRepository;
+import org.rga.graphql.model.Movie;
+import org.rga.graphql.repository.MovieRepository;
 import org.springframework.stereotype.Component;
 
 @Component

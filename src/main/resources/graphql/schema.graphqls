@@ -1,7 +1,3 @@
-schema{
-    query: Query
-}
-
 type Movie {
     id: String
     title: String
@@ -13,4 +9,16 @@ type Movie {
 type Query{
     allMovies:[Movie]
     movieById(id:String): Movie
+}
+
+type Mutation{
+    createMovie(MovieDTO: MovieDTO): Movie
+}
+
+input MovieDTO {
+    id: String
+    title: String
+    directors:[String]
+    actors:[String]
+    releaseDate:String
 }

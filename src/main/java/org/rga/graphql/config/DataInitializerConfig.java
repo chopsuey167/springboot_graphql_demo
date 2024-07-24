@@ -1,21 +1,21 @@
-package org.rga.graphql.graphql.provider;
+package org.rga.graphql.config;
 
 import jakarta.annotation.PostConstruct;
 import java.io.IOException;
 import java.util.stream.Stream;
 import lombok.AllArgsConstructor;
-import org.rga.graphql.Movie;
-import org.rga.graphql.MovieRepository;
+import org.rga.graphql.model.Movie;
+import org.rga.graphql.repository.MovieRepository;
 import org.springframework.stereotype.Component;
 
 @Component
 @AllArgsConstructor
-public class GraphQLProvider {
+public class DataInitializerConfig {
 
   private MovieRepository movieRepository;
 
   @PostConstruct
-  public void init() {
+  public void init() throws IOException {
     loadDataIntoHSQL();
   }
 

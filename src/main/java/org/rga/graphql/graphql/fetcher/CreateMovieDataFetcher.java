@@ -9,13 +9,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 @AllArgsConstructor
-public class MovieByIdDataFetcher implements DataFetcher<Movie> {
+public class CreateMovieDataFetcher implements DataFetcher<Movie> {
 
   private final MovieRepository movieRepository;
 
   @Override
   public Movie get(DataFetchingEnvironment environment) throws Exception {
-    String id = environment.getArgument("id");
-    return movieRepository.findById(id).orElse(null);
+
+    return null;
   }
 }
